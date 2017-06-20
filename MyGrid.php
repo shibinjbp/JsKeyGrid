@@ -27,7 +27,6 @@
     <script type="text/javascript">
         $(document).ready(function() {
 
-
             $('#tbl-entry').JsKeyGrid({
                 addButton: '#btn-add-row',
                 saveButton: '#btn-save',
@@ -36,19 +35,19 @@
                 tableTdClass: ["drp", "txt", "txt", "txt", "dte"],
                 dropdowns: [{
                     id: "1",
-                    text: "chair"
+                    text: "item 1"
                 }, {
                     id: "2",
-                    text: "table"
+                    text: "item 2"
                 }, {
                     id: "3",
-                    text: "xx"
+                    text: "item 3"
                 }, {
                     id: "4",
-                    text: "123"
+                    text: "item 4"
                 }, {
                     id: "5",
-                    text: "rtr"
+                    text: "item 5"
                 }],
                 onsaveData: function(sData) {
                     console.log(sData);
