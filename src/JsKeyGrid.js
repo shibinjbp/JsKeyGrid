@@ -68,7 +68,7 @@
 
            $(this).parent().parent().parent().next().find('tr:last').find('.dropDown').children('.select2').select2('open');
          });
- 
+
 
 
       }
@@ -263,7 +263,7 @@
                         } else {
                           // var fid = $(this).attr('name');
                         }
-                       break;
+                       break; 
                      case 13:
                             if($(this).parent().is('.dateBox')) {
                               var fid = $(this).attr('name');
