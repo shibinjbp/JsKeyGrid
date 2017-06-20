@@ -1,32 +1,10 @@
-#wrapper {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0px auto;
-    box-shadow: 1px 0px 50px rgba(0, 0, 0, 0.2);
-}
-.container-fluid {
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 15px;
-}
-.row {
-    margin-right: -7.5px;
-    margin-left: -7.5px;
-}
-.bg-title {
-    border-bottom: 1px solid #E4E7EA;
-    overflow: hidden;
-    padding: 15px 15px 10px;
-    margin-bottom: 25px;
-    margin-left: -25.5px;
-    margin-right: -25.5px;
-}
-.white-box {
+.jsContainerOuter {
     background: none repeat scroll 0% 0% #FFF;
-    padding: 25px;
-    margin-bottom: 15px;
+    margin: 25px 25px 15px;
+    width: 97%;
+    float: left;
 }
-#tbl-entry { width: 100%;}
+#tbl-entry { width: 100%; float: left;}
 #tbl-entry thead tr th {
     height: 20px;
     background-color: #FBFBFB;
@@ -47,8 +25,9 @@
     border-right: 1px solid #E4E4E4;
 }
 #tbl-entry tbody tr td input {
-    width: 50%;
+    width: 100% !important;
     float: left;
+    outline: none;
 }
 
 .form-horizontal .form-group {
@@ -118,6 +97,7 @@
 }
 .btn-info { color: #FFF; }
 /*select2*/
+.select2 {width:100%;border:none;}
 .select2-container .select2-choice {
     background-image: none !important;
     border: medium none !important;

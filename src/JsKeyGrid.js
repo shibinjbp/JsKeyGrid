@@ -176,6 +176,7 @@
                       break;
                      case 38:  //up
                         if(datX == 0) {
+                          var fid = $(this).attr('name');
                             if($(this).parent().is('.dateBox')) {
                                 var fid = $(this).attr('name');
                                 if($('input[name="'+fid+'"]').attr('bindstat')==0){
@@ -189,8 +190,8 @@
                                 }
                                //  if($('.datepicker').css('display') != 'block') {
                                 if($('input[name="'+fid+'"]').datepicker().css('display') != 'block') {
-                                  new_y = old_y - 1;
-                                  datX = 0;
+                                   new_y = old_y - 1;
+                                   datX = 0;
                                 } else {
                                    datX = 1;
                                 }
@@ -232,45 +233,43 @@
                        }
                        break;
                      case 40:  //down
-                       if(datX == 0) {
-                           if($(this).parent().is('.dateBox')) {
-                               var fid = $(this).attr('name');
-                               if($('input[name="'+fid+'"]').attr('bindstat')==0){
+                        if(datX == 0) {
+                            if($(this).parent().is('.dateBox')) {
+                                var fid = $(this).attr('name');
+                                $('input[name="'+fid+'"]').datepicker("remove");
+                                if($('input[name="'+fid+'"]').attr('bindstat')==0){ 
                                    $('input[name="'+fid+'"]').datepicker({autoclose: true,todayHighlight: true});
                                    $('input[name="'+fid+'"]').datepicker("show");
-                               } else {
+                                } else {
                                    $('input[name="'+fid+'"]').datepicker("remove");
                                    $('input[name="'+fid+'"]').attr('bindstat',0);
                                    $('input[name="'+fid+'"]').datepicker({autoclose: true,todayHighlight: true});
                                    $('input[name="'+fid+'"]').datepicker("show");
-                               }
-                               if($('input[name="'+fid+'"]').datepicker().css('display') != 'block') {
-                                 new_y = old_y + 1;
-                                 datX = 0;
-                               } else {
-                                  datX = 1;
-                               }
-                           } else {
-                             new_y = old_y + 1;
-                             datX = 0;
-                           }
+                                }
+                                if($('input[name="'+fid+'"]').datepicker().css('display') != 'block') {
+                                  new_y = old_y + 1;
+                                  datX = 0;
+                                } else {
+                                   datX = 1;
+                                }
+                            } else {
+                              new_y = old_y + 1;
+                              datX = 0;
+                            }
                         } else if(datX == 2) {
-                            new_y = old_y + 1;
-                            datX = 0;
+                              new_y = old_y + 1;
+                              datX = 0;
                         } else {
-
+                          // var fid = $(this).attr('name');
                         }
-
                        break;
                      case 13:
                             if($(this).parent().is('.dateBox')) {
                               var fid = $(this).attr('name');
-
                               if($('.datepicker').css('display') == 'block') {
                                  $('input[name="'+fid+'"]').attr('bindstat',1);
                               } else {
                                  $('input[name="'+fid+'"]').attr('bindstat',1);
-                                //  if($(this).parent().parent().next('tr').length != null){
                                  if($(this).parent().parent().next('tr').length){
                                       $(this).closest('tr').next('tr').find('.dropDown').children('.select2').select2('open');
                                  } else {
@@ -344,20 +343,7 @@
           _optionDelete: function(element,delete_elemnt) {
              var indexId = $(delete_elemnt).parent().parent().attr('index');
              $(delete_elemnt).parent().parent().remove('tr');
-          },
-
-
-
-          // function removeDatepicker(fid){
-          //   console.log("delete");
-          //     $('input[name="'+fid+'"]').datepicker( "destroy" );
-          //     $('input[name="'+fid+'"]').removeClass("hasDatepicker").removeAttr('id');
-          //     $(".datepicker").datepicker("destroy");
-          //     //  $(this).attr('name', 'other_amount');
-          //     //  $('input[name="'+fid+'"]').datepicker( "hide" );
-          //     //  $('input[name="'+fid+'"]').hide();
-          // }
-
+          }
 
 
        };

@@ -6,28 +6,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<!-- Bootstrap Core CSS -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-<!-- Menu CSS -->
-<link href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
-
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
 <link href="./src/style.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet">
-
 <link href="./src/js/custom-select.css" rel="stylesheet" type="text/css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="./src/js/jquery.min.js"></script>
 <script src="./src/js/custom-select.min.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js" type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 <script src="./src/JsKeyGrid.js" type="text/javascript"></script>
 
 </head>
 <body>
-<div id="wrapper">
-  <!-- Page Content -->
-  <div id="page-wrapper">
+<!-- <div id="wrapper">
+  <div id="page-wrapper"> -->
 
 
 <script type="text/javascript">
@@ -84,30 +78,10 @@ $(document).ready(function(){
 
 
 
-</script>
-<style>
-.select2 {width:100%;border:none;}
-#tbl-entry tbody tr td input { width: 50%; float: left;}
-</style>
+</script> 
 
-<div class="container-fluid">
-	<div class="row bg-title">
-		<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<div class="white-box">
-					<div class="row" id="toplevel">
-						<form class="form-horizontal">
-							<div class="form-group">
-								<label for="txtDate" class="col-sm-1 control-label" style="width:100px;"> </label>
-								<div class="col-sm-2">
-									<!-- <input class="form-control mydatepicker" id="txtDate" placeholder="Enter Date" value=""> -->
-								 	</div>
-								</div>
-							</form>
-						</div>
+
+			<div class="jsContainerOuter">
 
             <div class="jsContainer">
   						<table id="tbl-entry">
@@ -138,16 +112,6 @@ $(document).ready(function(){
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-
-
-<!-- footer -->
-<!-- /.container-fluid -->
-  </div>
-  <!-- /#page-wrapper -->
-</div>
-<!-- /#wrapper -->
 
 
 <script>
