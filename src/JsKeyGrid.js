@@ -60,14 +60,15 @@
             $(this).parent().next().children().focus();
          });
 
-        //  $(element).on( "click", function() {
-        //    $('.select2').each(function (i, obj) {
-        //       if (!$(obj).data("select2")) { $(obj).select2(); }
-        //    });
-        //    $('.mydate').each(function (i, obj) {
-        //       if (!$(obj).data("mydate")) { $(obj).datepicker({autoclose: true, todayHighlight: true}); }
-        //    });
-        //  });
+
+         $(options.addButton).on( "click", function() {
+           $('.select2').each(function (i, obj) {
+              if (!$(obj).data("select2")) { $(obj).select2(); }
+           });
+
+           $(this).parent().parent().parent().next().find('tr:last').find('.dropDown').children('.select2').select2('open');
+         });
+ 
 
 
       }
@@ -237,7 +238,7 @@
                             if($(this).parent().is('.dateBox')) {
                                 var fid = $(this).attr('name');
                                 $('input[name="'+fid+'"]').datepicker("remove");
-                                if($('input[name="'+fid+'"]').attr('bindstat')==0){ 
+                                if($('input[name="'+fid+'"]').attr('bindstat')==0){
                                    $('input[name="'+fid+'"]').datepicker({autoclose: true,todayHighlight: true});
                                    $('input[name="'+fid+'"]').datepicker("show");
                                 } else {

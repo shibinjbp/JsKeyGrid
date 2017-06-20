@@ -20,8 +20,6 @@
 
 </head>
 <body>
-<!-- <div id="wrapper">
-  <div id="page-wrapper"> -->
 
 
 <script type="text/javascript">
@@ -35,28 +33,13 @@ $(document).ready(function(){
           deleteButton: '.btn-delete-row',
           tableType: ["dropDown", "textBox", "textBox", "Box", "dateBox"],
           tableTdClass: ["drp", "txt", "txt", "txt", "dte"],
-          dropdowns : [{id:"1",text:"chair"},{id:"2",text:"table"}],
+          dropdowns : [{id:"1",text:"chair"},{id:"2",text:"table"},{id:"3",text:"xx"},{id:"4",text:"123"},{id:"5",text:"rtr"}],
           onsaveData: function(sData) {
             console.log(sData);
           }
        });
 
-
-       $( "#btn-add-row" ).on( "click", function() {
-         $('.select2').each(function (i, obj) {
-            if (!$(obj).data("select2")) { $(obj).select2(); }
-         });
-       });
-
-
-
-
-
-// manual functions
-
- $( "#btn-add-row" ).one( "click", function() {
-      $(this).parent().parent().parent().next().find('tr').find('.dropDown').children('.select2').select2('open');
- });
+ 
  $('#tbl-entry').on("focusout",'.txt1', function(){
     var cur_val = $(this).val();
     var prev_val = $(this).parent().next().children('.xx').val();
@@ -78,9 +61,9 @@ $(document).ready(function(){
 
 
 
-</script> 
+</script>
 
-
+  <!--  -->
 			<div class="jsContainerOuter">
 
             <div class="jsContainer">
@@ -112,13 +95,7 @@ $(document).ready(function(){
 					</div>
 				</div>
 			</div>
+      <!--  -->
 
-
-<script>
-$(document).ready(function(){
-		// Animate loader off screen
-		$(".se-pre-con").addClass('nojsload');
-});
-</script>
 </body>
 </html>
