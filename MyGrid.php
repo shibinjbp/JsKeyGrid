@@ -53,7 +53,22 @@
                     console.log(sData);
                 }
             });
- 
+
+
+            //  $( "#btn-add-row" ).on( "click", function() {
+            //    $('.select2').each(function (i, obj) {
+            //       if (!$(obj).data("select2")) { $(obj).select2(); }
+            //    });
+            //  });
+
+
+
+
+            // manual functions
+
+            // $( "#btn-add-row" ).one( "click", function() {
+            //      $(this).parent().parent().parent().next().find('tr').find('.dropDown').children('.select2').select2('open');
+            // });
             $('#tbl-entry').on("focusout", '.txt1', function() {
                 var cur_val = $(this).val();
                 var prev_val = $(this).parent().next().children('.xx').val();
